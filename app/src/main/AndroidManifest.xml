@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.insidecoderz001.musicplayer">
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage">
+    </uses-permission>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+
+    <application
+        android:name=".Classes.ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/music_icon"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Splash"
+        android:roundIcon="@mipmap/music_icon_round"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        >
+        <service android:name=".Classes.MusicService"/>
+        <receiver android:name=".Classes.NotificationReceiver"
+            android:enabled="true"/>
+        <activity
+            android:name=".PlayListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".FavouritesSongs"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".PlayerActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity">
+
+        </activity>
+        <activity
+            android:theme="@style/Theme.Splash"
+            android:name=".StartScreen.SplashScreen"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:noHistory="true"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity">
+
+        </activity>
+
+    </application>
+
+
+</manifest>

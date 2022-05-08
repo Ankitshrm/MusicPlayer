@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+    <string name="splashimage">SplashImage</string>
+    <string name="playlist">Playlist</string>
+    <string name="favorite">Favorite</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>
